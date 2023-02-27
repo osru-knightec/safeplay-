@@ -7,7 +7,7 @@
     "start:local": "vite --port=3000",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "gh-pages": "git subtree push --prefix dist origin gh-pages"
+    "gh-pages": "yarn build && git add -A && git commit -m \"Updating gh-pages \" && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "react": "^18.2.0",
