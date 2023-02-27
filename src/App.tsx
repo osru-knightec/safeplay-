@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home/Home";
 import { Privacy } from "./pages/Privacy/Privacy";
@@ -14,9 +14,9 @@ function RouteList() {
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename="/safeplayplus">
       <RouteList />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

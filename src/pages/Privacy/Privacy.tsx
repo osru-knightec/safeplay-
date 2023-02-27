@@ -1,3 +1,4 @@
+import html from "../../html/policy";
 export const Privacy = () => {
-  return <h1>Privacys</h1>;
+  return <div style={{ padding: 10 }} dangerouslySetInnerHTML={{ __html: html }}></div>;
 };
