@@ -34,17 +34,20 @@ jobs:
           uses: actions/setup-node@v1
           with:
             node-version: 16
-
-        - name: Install dependencies
-          uses: bahmutov/npm-install@v1
-
-        - name: Build project
-          run: npm run build
-
-        - name: Upload production-ready build files
-          uses: actions/upload-artifact@v2
+            
+        - name: Run install
+          uses: borales/actions-yarn@v4
           with:
-            name: production-files
+            cmd: install # will run `yarn install` command
+            
+        - name: Build production bundle
+          uses: borales/actions-yarn@v4
+          with:
+            cmd: build # will run `yarn build:prod` command
+
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v1
+          with:  
             path: ./dist
 
   # Deployment job
