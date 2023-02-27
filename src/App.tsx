@@ -7,7 +7,7 @@ function RouteList() {
   return (
     <Routes>
       <Route path="/privacy" element={<Privacy />} />
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Privacy />} />
     </Routes>
   );
 }
