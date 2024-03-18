@@ -47,7 +47,7 @@ function RouteList() {
   const navigate = useNavigate();
   return (
     <ClerkProvider
-      publishableKey={import.meta.env.VITE_CLERK_PK}
+      publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}
       navigate={(to) => navigate(to)}
       appearance={{ variables: { colorPrimary: "#ea580c" } }}
     >
